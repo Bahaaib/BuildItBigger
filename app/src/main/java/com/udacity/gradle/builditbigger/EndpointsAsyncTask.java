@@ -10,7 +10,6 @@ import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
-import com.udacity.gradle.builditbigger.backend.myApi.model.MyBean;
 
 import java.io.IOException;
 
@@ -43,7 +42,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
         context = mContext[0];
         try {
-            return myApiService.putJoke(new MyBean()).execute().getJoker();
+            return myApiService.putJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }

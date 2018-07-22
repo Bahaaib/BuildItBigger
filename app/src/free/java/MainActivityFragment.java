@@ -17,7 +17,6 @@ import com.google.android.gms.ads.AdView;
  */
 public class MainActivityFragment extends Fragment {
     private Button jokeButton;
-    private TextView flavorTV;
 
     public MainActivityFragment() {
         //Required Empty Constructor
@@ -38,14 +37,8 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        flavorTV = (TextView)root.findViewById(R.id.flavor_tv);
 
-//        if (paidFlavor){
-//            flavorTV.setText("PAID VERSION");
-//        }else {
-//            flavorTV.setText("FREE VERSION");
-//
-//        }
+
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
